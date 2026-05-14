@@ -64,7 +64,7 @@ const translations = {
     healthAnalysis: "صحت کا تجزیہ",
     prediction: "پیشن گوئی: آپ کی جلد کی بحالی کی کارکردگی 92٪ ہے۔ AI موجودہ ہائیڈریشن پروٹوکول کو جاری رکھنے کا مشورہ دیتا ہے۔",
     efficiency: "کارکردگی",
-    consultSpecialist: "ماہر سے مشورہ",
+    consultSpecialist: "ماهر سے مشورہ",
     bookSession: "ماہر کلینیکل سیشن بک کریں",
     clinicalInsight: "کلینیکل بصیرت",
     insightText: "AI تجزیہ بتاتا ہے کہ صبح کی مسلسل ہائیڈریشن جلد کی رکاوٹ کے کام کو 22 فیصد تک بہتر بناتی ہے۔",
@@ -132,10 +132,7 @@ export default function HomePage() {
       <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => router.push('/scan')} className="bg-clinical-blue rounded-[32px] p-7 mb-6 relative overflow-hidden group cursor-pointer shadow-2xl shadow-blue-500/30">
         <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full -mr-16 -mt-16 blur-3xl group-hover:scale-125 transition-transform duration-700" />
         <div className="relative z-10 flex items-center justify-between">
-          <div>
-            <h2 className="text-white text-2xl font-black mb-1 leading-tight">{t.startScan}</h2>
-            <p className="text-white/70 text-[10px] font-black uppercase tracking-[0.2em]">{t.dermatologicalAnalysis}</p>
-          </div>
+          <div><h2 className="text-white text-2xl font-black mb-1 leading-tight">{t.startScan}</h2><p className="text-white/70 text-[10px] font-black uppercase tracking-[0.2em]">{t.dermatologicalAnalysis}</p></div>
           <div className="w-16 h-16 bg-white/20 backdrop-blur-md rounded-3xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-transform"><Camera className="text-white" size={32} /></div>
         </div>
       </motion.div>
