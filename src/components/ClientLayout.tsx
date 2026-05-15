@@ -7,8 +7,10 @@ import { SafetyFooter } from "@/components/SafetyFooter";
 
 export function ClientLayout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  
   const isDoctorRoute = pathname?.startsWith('/doctor');
-  const isAuthRoute = ['/welcome', '/', '/login', '/signup', '/profile-setup'].includes(pathname || '');
+  const isAuthRoute = ['/welcome', '/', '/login', '/signup', '/profile-setup', '/portal-select'].includes(pathname || '');
+  
   const showGlobalUI = !isDoctorRoute && !isAuthRoute;
 
   return (
