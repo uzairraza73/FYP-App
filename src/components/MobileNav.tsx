@@ -23,7 +23,8 @@ export const MobileNav = () => {
     '/login', 
     '/signup', 
     '/profile-setup', 
-    '/'
+    '/',
+    '/portal-select'
   ].includes(pathname);
 
   if (hideNav) {
@@ -31,7 +32,7 @@ export const MobileNav = () => {
   }
 
   return (
-    <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[450px] glass-card border-t border-slate-100 dark:border-slate-800 px-4 py-3 pb-6 z-50 rounded-t-[32px] shadow-2xl">
+    <nav className="absolute bottom-0 left-0 w-full glass-card border-t border-slate-100 dark:border-slate-800 px-4 py-3 pb-6 z-50 rounded-t-[32px] shadow-2xl">
       <div className="flex justify-between items-center max-w-[400px] mx-auto">
         {navItems.map((item) => {
           const isActive = pathname === item.href;

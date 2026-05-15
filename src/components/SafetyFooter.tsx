@@ -7,7 +7,7 @@ import { ShieldAlert } from 'lucide-react';
 export const SafetyFooter = () => {
   const pathname = usePathname();
 
-  const hiddenPaths = ['/welcome', '/', '/login', '/signup', '/profile-setup', '/scan'];
+  const hiddenPaths = ['/welcome', '/', '/login', '/signup', '/profile-setup', '/scan', '/portal-select'];
   if (hiddenPaths.includes(pathname)) return null;
 
   return (
