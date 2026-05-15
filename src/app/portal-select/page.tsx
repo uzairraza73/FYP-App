@@ -98,14 +98,20 @@ export default function PortalSelectPage() {
                              shadow-[0_15px_40px_rgba(30,58,138,0.05)] hover:shadow-[0_25px_60px_rgba(30,58,138,0.12)] 
                              hover:border-clinical-blue/20 transition-all duration-300`}
                 >
-                  <div className={`w-20 h-20 ${portal.color} rounded-3xl flex items-center justify-center text-white`}>
+                  <div className={`w-20 h-20 ${portal.color} rounded-3xl flex items-center justify-center text-white shadow-lg group-hover:rotate-6 transition-transform duration-500`}>
                     <portal.icon size={36} />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-black text-dark-blue mb-1.5">{portal.title}</h3>
-                    <p className="text-slate-500 text-[12px] font-medium leading-snug">{portal.description}</p>
+                    <h3 className="text-lg font-black text-dark-blue mb-1.5 group-hover:text-clinical-blue transition-colors">
+                      {portal.title}
+                    </h3>
+                    <p className="text-slate-500 text-[12px] font-medium leading-snug">
+                      {portal.description}
+                    </p>
                   </div>
-                  <ArrowRight size={18} className="text-dark-blue" />
+                  <div className="w-10 h-10 rounded-2xl bg-light-blue/20 flex items-center justify-center text-dark-blue group-hover:bg-dark-blue group-hover:text-white transition-all duration-300">
+                    <ArrowRight size={18} />
+                  </div>
                 </motion.button>
               ))}
             </div>
