@@ -130,13 +130,27 @@
   max-width: 450px;
   min-height: 100vh;
   background-color: var(--background);
-  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 0 100px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.08);
   overflow-x: hidden;
-  transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .app-container {
+    height: 90vh;
+    min-height: 800px;
+    margin: 5vh auto;
+    border-radius: 40px;
+    border: 8px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .dark .app-container {
+    border: 8px solid rgba(255, 255, 255, 0.05);
+  }
 }
 
 .mesh-gradient {

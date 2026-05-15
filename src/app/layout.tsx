@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} h-full antialiased`}>
-      <body className="min-h-full">
+      <body className="min-h-full flex flex-col items-center bg-slate-50 dark:bg-[#060B18] overflow-x-hidden">
         <div className="app-container">
           <ClientLayout>
             <PageWrapper>
